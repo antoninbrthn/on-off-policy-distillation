@@ -1,0 +1,158 @@
+/* Version-two refinements; the original post keeps its existing styling. */
+:root {
+  --on-policy: #377eb8;
+  --on-policy-soft: #edf5fc;
+}
+
+.policy-card.on-policy {
+  border-top-color: var(--on-policy);
+  background: var(--on-policy-soft);
+}
+
+.only-variable::before,
+.only-variable::after {
+  background: linear-gradient(90deg, var(--orange), var(--on-policy));
+}
+
+.spectrum-scale::before {
+  background: linear-gradient(90deg, var(--orange), #b8bec6 50%, var(--on-policy));
+}
+
+.spectrum-scale div:first-child span {
+  color: #985b10;
+}
+
+.spectrum-scale div:last-child span {
+  color: #28699d;
+}
+
+.generalisation-result {
+  border-color: #c9deef;
+  border-left-color: var(--on-policy);
+  background: linear-gradient(135deg, #ffffff, var(--on-policy-soft));
+}
+
+.generalisation-result .result-kicker {
+  color: #28699d;
+}
+
+.tldr,
+.central-question {
+  background: var(--blue-soft);
+}
+
+.central-question {
+  border-color: #cadce7;
+  border-left-color: var(--blue);
+}
+
+.central-question span {
+  color: var(--blue);
+}
+
+.central-question p {
+  color: #27384a;
+}
+
+.equation-grid {
+  margin-top: 1.1rem;
+}
+
+.equation-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.equation-heading {
+  flex-wrap: wrap;
+  gap: 0.3rem 0.75rem;
+  padding-top: 0.65rem;
+}
+
+.equation-heading .equation-direction {
+  color: var(--muted);
+  font-size: 0.84rem;
+  font-weight: 400;
+}
+
+.equation {
+  display: grid;
+  align-items: center;
+  min-height: 0;
+  padding: 0.35rem 0.65rem;
+  font-size: 1.12rem;
+}
+
+.equation mjx-container[jax="SVG"][display="true"] {
+  margin: 0.3em auto !important;
+}
+
+.equation-note {
+  flex: 1;
+  min-height: 0;
+  padding: 0.65rem 1rem 0.8rem;
+}
+
+.equation-note p {
+  margin-top: 0.35rem;
+}
+
+.equation-detail {
+  max-width: 850px;
+  margin: 0 auto 1.15rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.equation-conclusion {
+  max-width: none;
+  text-align: left;
+}
+
+.citation-bibtex {
+  margin: 1.25rem 0 0;
+  padding: 1.2rem 1.35rem;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  color: #344258;
+  background: var(--soft);
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 0.82rem;
+  line-height: 1.7;
+  tab-size: 2;
+}
+
+.citation-bibtex:focus-visible {
+  outline: 2px solid var(--on-policy);
+  outline-offset: 4px;
+}
+
+@media (max-width: 1100px) {
+  .equation-grid {
+    grid-template-columns: 1fr;
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 480px) {
+  .equation {
+    padding-right: 0.45rem;
+    padding-left: 0.45rem;
+    font-size: 0.95rem;
+  }
+
+  .citation-bibtex {
+    padding: 1rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .equation {
+    font-size: 0.85rem;
+  }
+}
