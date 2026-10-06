@@ -33,7 +33,7 @@
         </a>
       </nav>
 
-      <p class="tldr"><strong>TL;DR</strong> Rollout policy alone does not explain many behaviours commonly associated with on-policy post-training. Forward KL is remarkably robust to whether rollouts come from the teacher or student, while reverse KL favours student-generated rollouts; meanwhile, learning rate largely governs catastrophic forgetting and update sparsity. On-policy rollouts consistently improve generalisation to harder Countdown variants, although this advantage does not reliably persist after RLVR.</p>
+      <p class="tldr"><strong>TL;DR</strong> In this controlled study we find that rollout policy alone does not explain many of the behaviours commonly associated with on-policy post-training. We find that when used as a token-level KL objectie, forward KL is remarkably robust to whether rollouts come from the teacher or student, maintaining high performance throughout the student-teacher spectrum. Meanwhile, reverse KL is more sensitive, favouring student-generated rollouts. Interestingly, in the settings we study catastrophic forgetting and update sparsity are primarily governed by the learning rate, with little to no variation due to rollout policy. Nevertheless, on-policy rollouts consistently improve generalisation to harder Countdown variants, although this advantage does not reliably persist after RLVR.</p>
     </header>
 
     <section>
